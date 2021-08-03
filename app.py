@@ -17,7 +17,7 @@ DB_PORT = os.getenv('DB_PORT')
 
 app = Flask(__name__)
 
-
+# Testing commit
 # POSTGRES_CONFIG=os.getenv('POSTGRES_CONFIG')
 # app.config['SQLALCHEMY_DATABASE_URI']='postgresql://{}'.format(POSTGRES_CONFIG)
 # db=SQLAlchemy(app)
@@ -56,7 +56,7 @@ def search():
     minima = round(kelvin_to_celsius(req['main']['temp_min']), 2)
     maxima = round(kelvin_to_celsius(req['main']['temp_max']), 2)
 
-    
+
 
     wthr = Weather(city=city, weather=weather, description=description, minima=minima, maxima=maxima)
     wthr_dao = WeatherDao(db)
