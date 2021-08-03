@@ -5,11 +5,11 @@ def connect_db():
     Notes:
         This method connects the program to the database.
     '''
-    db = psycopg2.connect(dbname="weather_api",
+    db = psycopg2.connect(dbname="api_db",
                           user="postgres",
-                          password="",
+                          password="toor",
                           host="localhost",
-                          port="5433")
+                          port="5432")
     return db
 
 
@@ -68,14 +68,15 @@ def insert_db(sql):
 
 if __name__ == '__main__':
 
-    sql = 'DROP TABLE IF EXISTS public.characters;'
+    # sql = 'DROP TABLE IF EXISTS teste;'
 
-    create_db(sql)
+    # create_db(sql)
 
     sql = '''
-        CREATE TABLE IF NOT EXISTS public.characters
+        CREATE TABLE IF NOT EXISTS teste
         (
             id SERIAL PRIMARY KEY,
             name VARCHAR(20)
         );
     '''
+    create_db(sql)
