@@ -17,7 +17,6 @@ DB_PORT = os.getenv('DB_PORT')
 
 app = Flask(__name__)
 
-# Testing commit
 # POSTGRES_CONFIG=os.getenv('POSTGRES_CONFIG')
 # app.config['SQLALCHEMY_DATABASE_URI']='postgresql://{}'.format(POSTGRES_CONFIG)
 # db=SQLAlchemy(app)
