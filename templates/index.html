@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <form action="/search" method="post">
+            <div class="row" id=row>
+                <div class=".col-sm-" <label for="cidade">Digite a Cidade:</label><br>
+                    <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Digite Uma Cidade"><br>
+                    <button type="submit" class="btn btn-outline-dark"> Verificar </button>
+                </div>
+            </div>
+        </form>
+        <br> {% if not_found %}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {% else %}
+        <li class="list-group-item">Cidade: {{city}}</li>
+        <li class="list-group-item">Tempo: {{weather}}</li>
+        <li class="list-group-item">Descrição: {{description}}</li>
+        <li class="list-group-item">Minima: {{minima}} C</li>
+        <li class="list-group-item">Maxima: {{maxima}} C</li>
+
+
+        {% endif %}
+        <br><br><br>
+    </div>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js " integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+</body>
+
+</html>
