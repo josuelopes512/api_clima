@@ -5,4 +5,3 @@ media
 __pycache__
 *.env
 db_config_example.py
-.gitignore
