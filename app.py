@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-# from flask_sqlalchemy import SQLAlchemy
 from config import kelvin_to_celsius, connect_db
 from dotenv import load_dotenv
 from models import Weather
@@ -16,13 +15,10 @@ DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')
 DB_PORT = os.getenv('DB_PORT')
+DEBUG = os.getenv('DEBUG')
+
 
 app = Flask(__name__)
-
-# POSTGRES_CONFIG=os.getenv('POSTGRES_CONFIG')
-# app.config['SQLALCHEMY_DATABASE_URI']='postgresql://{}'.format(POSTGRES_CONFIG)
-# db=SQLAlchemy(app)
-
 db = connect_db(DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT)
 
 
@@ -66,4 +62,4 @@ def search():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=DEBUG)
