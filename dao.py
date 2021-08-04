@@ -7,6 +7,7 @@ SQL_DELETA_WEATHER_CIDADE = 'DELETE FROM weather_db WHERE city = %s;'
 
 SQL_WEATHER_BUSCA_POR_CIDADE = 'SELECT city, weather, description, minima, maxima from weather_db where city = %s;'
 SQL_WEATHER_BUSCA_POR_ID = 'SELECT city, weather, description, minima, maxima from weather_db where id = %s;'
+SQL_BUSCA_WEATHER = 'SELECT * FROM weather_db'
 
 SQL_ATUALIZA_WEATHER = 'UPDATE weather_db SET weather= %s description= %s minima= %s maxima= %s where city = %s;'
 
